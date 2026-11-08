@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#1e1e38" />
+      <stop offset="60%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#05070d" />
+    </radialGradient>
+
+    <!-- Glowing Core Gradients -->
+    <linearGradient id="neonCyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <linearGradient id="cubeTop" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+
+    <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <linearGradient id="cubeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feGaussianBlur stdDeviation="32" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="800" rx="160" fill="url(#bgGrad)" />
+  <rect width="796" height="796" x="2" y="2" rx="158" fill="none" stroke="url(#neonCyanPurple)" stroke-width="2.5" stroke-opacity="0.3" />
+
+  <!-- Ambient Light Halo behind product -->
+  <circle cx="400" cy="360" r="190" fill="#6366F1" opacity="0.18" filter="url(#glow)" />
+  <circle cx="400" cy="350" r="100" fill="#00F5FF" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Orbiting Circuit / Connectivity Nodes -->
+  <g stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 6" opacity="0.4" fill="none">
+    <ellipse cx="400" cy="370" rx="270" ry="120" transform="rotate(-15 400 370)" />
+  </g>
+  <circle cx="160" cy="320" r="4" fill="#00F5FF" filter="url(#softGlow)" />
+  <circle cx="640" cy="420" r="4" fill="#A855F7" filter="url(#softGlow)" />
+  <circle cx="280" cy="460" r="3" fill="#38BDF8" filter="url(#softGlow)" />
+  <circle cx="520" cy="270" r="3.5" fill="#C084FC" filter="url(#softGlow)" />
+
+  <!-- ISOMETRIC 3D PRODUCT CUBE -->
+  <g transform="translate(0, -25)">
+    <!-- Back Glow -->
+    <polygon points="400,160 560,250 400,340 240,250" fill="url(#cubeTop)" opacity="0.3" filter="url(#softGlow)" />
+
+    <!-- Top Face (Product Deck) -->
+    <polygon points="400,170 550,255 400,340 250,255" fill="url(#cubeTop)" />
+    
+    <!-- Top Face Grid Detail (Enterprise Layers) -->
+    <path d="M 325,212 L 475,297 M 475,212 L 325,297" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" />
+
+    <!-- Left Face (Prompt / Terminal Input Side) -->
+    <polygon points="250,255 400,340 400,510 250,425" fill="url(#cubeLeft)" />
+
+    <!-- Left Face Details: The Prompt ">_" -->
+    <g transform="matrix(0.866 0.5 0 1 0 0)">
+      <!-- Terminal prompt shape mapped to left isometric facet -->
+    </g>
+    <!-- Prompt Chevron '>' on Left Face -->
+    <path d="M 295,335 L 325,355 L 295,375" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)" />
+    <!-- Blinking / Glowing Prompt Cursor '_' -->
+    <line x1="340" y1="380" x2="368" y2="396" stroke="#00F5FF" stroke-width="8" stroke-linecap="round" filter="url(#softGlow)" />
+
+    <!-- Right Face (Shipped Production & Shield Side) -->
+    <polygon points="400,340 550,255 550,425 400,510" fill="url(#cubeRight)" />
+    
+    <!-- Right Face Details: Enterprise Shield & Checkmark -->
+    <path d="M 475,320 L 515,300 L 515,355 C 515,385 475,410 475,410 C 475,410 435,385 435,355 L 435,300 Z" 
+          fill="#1E1B4B" fill-opacity="0.6" stroke="#C084FC" stroke-width="3" />
+    <path d="M 458,348 L 471,362 L 495,335" fill="none" stroke="#00F5FF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)" />
+
+    <!-- Isometric Edges Highlight Lines -->
+    <line x1="400" y1="170" x2="400" y2="340" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.5" />
+    <line x1="400" y1="340" x2="400" y2="510" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.6" />
+    <line x1="250" y1="255" x2="400" y2="340" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" />
+    <line x1="550" y1="255" x2="400" y2="340" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" />
+
+    <!-- Autonomous Sparkles / AI Energy Stars -->
+    <g transform="translate(400, 150)" filter="url(#glow)">
+      <!-- Central Diamond Star -->
+      <path d="M 0,-24 Q 0,0 24,0 Q 0,0 0,24 Q 0,0 -24,0 Q 0,0 0,-24 Z" fill="#00F5FF" />
+    </g>
+    <g transform="translate(225, 235)" filter="url(#softGlow)">
+      <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#38BDF8" />
+    </g>
+    <g transform="translate(575, 240)" filter="url(#softGlow)">
+      <path d="M 0,-14 Q 0,0 14,0 Q 0,0 0,14 Q 0,0 -14,0 Q 0,0 0,-14 Z" fill="#C084FC" />
+    </g>
+  </g>
+
+  <!-- BRAND TYPOGRAPHY -->
+  <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <!-- Main Title -->
+    <text x="400" y="625" font-size="52" font-weight="900" letter-spacing="1">
+      <tspan fill="#FFFFFF">Prompt</tspan><tspan fill="url(#textGrad)">2Product</tspan>
+    </text>
+
+    <!-- Subtitle / Badge -->
+    <rect x="230" y="655" width="340" height="32" rx="16" fill="#1E293B" stroke="#6366F1" stroke-width="1.5" stroke-opacity="0.5" />
+    <text x="400" y="677" font-size="15" font-weight="700" fill="#94A3B8" letter-spacing="3.5">
+      1-PROMPT TO PRODUCTION
+    </text>
+
+    <!-- Tags -->
+    <text x="400" y="730" font-size="13" font-weight="500" fill="#64748B" letter-spacing="1">
+      RESEARCH • SUBAGENTS • RED/BLUE AUDIT • ZERO-DEFECT
+    </text>
+  </g>
+</svg>
