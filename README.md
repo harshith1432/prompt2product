@@ -1,4 +1,6 @@
-# Enterprise Autonomous Orchestrator
+# Prompt2Product 🚀
+
+> **From a 1-Line Prompt to a Full Production App.**
 
 An autonomous AI agent orchestration skill modeled after [Paperclip AI](https://github.com/paperclipai/paperclip)'s control plane principles, fortified with **Prompt Loop Engineering** and an automated **6-Round Red Team / Blue Team Security Hardening Loop**.
 
@@ -12,8 +14,8 @@ Most AI coding assistants suffer from three critical flaws when given an idea:
 2. **Disconnected from Market & Compliance Realities:** They guess visual styles and ignore modern data privacy regulations (e.g., India's **DPDP Act 2023**, Europe's **GDPR**) and security standards (**OWASP Top 10**).
 3. **Overloaded Single-Agent Bottlenecks:** A single agent prompt attempts to design UI, write APIs, optimize queries, configure security headers, and test logic simultaneously—inevitably producing fragile, vulnerable software.
 
-### The Solution: Enterprise Autonomous Orchestrator
-Inspired by **Paperclip AI's** corporate orchestration philosophy—where agents act like organized departments rather than scattered terminal tabs—the **Enterprise Autonomous Orchestrator** elevates software development from simple prompt-response to an autonomous digital enterprise:
+### The Solution: Prompt2Product
+Inspired by **Paperclip AI's** corporate orchestration philosophy—where agents act like organized departments rather than scattered terminal tabs—**Prompt2Product** elevates software development from simple prompt-response to an autonomous digital enterprise:
 
 * **From 1 Line to Enterprise-Grade:** You don't need a 5-page specification. Input a simple goal (e.g., *"Build an e-commerce website for a shoe shop"*), and the orchestrator autonomously executes live web research on top market players (Nike, StockX, Goat), identifies current design aesthetics, extracts trending color palettes, and models data structures.
 * **Specialized Subagent Fleet:** Work is cleanly partitioned across 5 dedicated roles: UI/UX Designer, Frontend Engineer, Backend Engineer, Security & Compliance Officer, and QA Pentester.
@@ -53,7 +55,7 @@ Inspired by **Paperclip AI's** corporate orchestration philosophy—where agents
 ## 📂 Repository Structure
 
 ```
-enterprise-orchestrator/
+prompt2product/
 ├── SKILL.md                          # Main Skill Manifest & 6-stage lifecycle
 ├── workflows/
 │   ├── prompt-expander.md            # Market & design trend research logic
@@ -78,14 +80,14 @@ enterprise-orchestrator/
 ### Global Antigravity Install
 Copy this skill directory into your Antigravity skills path:
 ```bash
-cp -r enterprise-orchestrator ~/.gemini/antigravity/skills/
+cp -r prompt2product ~/.gemini/antigravity/skills/
 ```
 
 ### Usage
 In your chat or agent prompt, simply supply any goal:
 > *"Build an e-commerce website for a shoe shop"*
 
-The orchestrator will automatically execute the research, synthesis, subagent delegation, prompt loop, and 6-round security audit.
+Prompt2Product will automatically execute the research, synthesis, subagent delegation, prompt loop, and 6-round security audit.
 
 ---
 

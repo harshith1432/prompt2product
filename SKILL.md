@@ -1,23 +1,23 @@
 ---
-name: enterprise-orchestrator
+name: prompt2product
 description: >
-  Autonomous enterprise software orchestrator based on Paperclip AI principles. 
-  Takes a simple user prompt (e.g. "Build an e-commerce website for a shoe shop"), 
+  From a 1-line prompt to a full production app. Built on Paperclip AI principles, 
+  Prompt2Product takes a simple user prompt (e.g. "Build an e-commerce website for a shoe shop"), 
   autonomously conducts live web research on trending designs and legal/security compliance 
   (OWASP Top 10, DPDP Act 2023, GDPR), synthesizes an entrepreneur-grade master specification, 
   deploys specialized domain subagents (UI/UX, Frontend, Backend, Security, QA), executes 
   via Prompt Loop Engineering, and runs a 6-round Red Team / Blue Team security audit & patch loop.
 ---
 
-# Enterprise Autonomous Orchestrator
+# Prompt2Product
 
-The Enterprise Autonomous Orchestrator converts a **simple, brief user prompt** into an **entrepreneur-grade, secure, compliant, fully-implemented production application**.
+**Prompt2Product** converts a **simple, brief user prompt** into an **entrepreneur-grade, secure, compliant, fully-implemented production application**.
 
 It is modeled after [Paperclip AI](https://github.com/paperclipai/paperclip)'s control plane and org chart dynamics, fortified with **Prompt Loop Engineering** and an **Iterative Red Team / Blue Team Security Hardening Loop** so that no vulnerability or partial output remains.
 
 ---
 
-## The 6-Stage Orchestration Lifecycle
+## The 6-Stage Lifecycle
 
 ```
 [ Simple User Prompt ]
